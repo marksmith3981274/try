@@ -17,7 +17,11 @@ const knex = require('knex')({
 });
 
 app.get('/', (req, res) => {
-  res.send('MANUAL')
+  res.send('HI ROBBY, DANIEL, RYAN !!!!!')
+})
+
+app.get('/names/list', (req, res) => {
+  knex.select('*').from('names').then(data => res.json(data));
 })
 
 app.listen(port, () => console.log(`Listening on port ${port}.`))
