@@ -17,7 +17,7 @@ const knex = require('knex')({
 });
 
 app.get('/', (req, res) => {
-  res.send('Hello')
+  res.send('MANUAL')
 })
 
 app.listen(port, () => console.log(`Listening on port ${port}.`))
